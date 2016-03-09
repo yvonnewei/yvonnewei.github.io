@@ -1,0 +1,54 @@
+/*
+The background of each fieldset is lightyellow e.g. background:lightyellow.
+The border of each fieldset is yellow, with 10px width e.g. border:10px solid yellow
+The fieldset needs to have margin-bottom:10px
+The width of each fieldset is 720px
+The width of each label is 180px
+The label text needs to have display:inline-block
+The label text needs to be right-align and top-align 
+The labels of the checkbox and the radio needs to have width:auto
+For the words on both sides of the two range, you can use any appropriate style e.g. text-align:center
+The textarea needs to be width:360px and height:50px
+*/
+body{
+	font-family: Arial;
+
+}
+fieldset{
+	background-color: lightyellow;
+	border: 10px solid yellow;
+	margin-bottom: 10px;
+	width: 720px;
+}
+label{
+	width: 180px;
+	display: inline-block;
+	text-align: right; 
+}
+label:hover{
+	font-size:20px;
+}
+input:hover{
+	font-size:20px;
+}
+#gender.label{
+	width:auto;
+}
+#contact.label{
+	width: auto;
+}
+#range1{
+	text-align: center;
+	background-color: red;
+	color: white;
+}
+#range2{
+	text-align: center;
+	background-color: purple;
+	color: white;
+}
+#address{
+	vertical-align: top;
+	width: 360px;
+	height: 50px;
+}
