@@ -1,0 +1,72 @@
+<!--The Task 
+A startup company wishes to build a web site for their online dating business. They have employed a designer who has produced the following design using desktop publishing software. The software used by the designer only produces an image, and does not produce HTML.
+The company has now contracted you to implement the design i.e. build the web page. This includes a working form component. The company thinks the designer has done a great job and wants you to implement the design without altering the style.-->
+<!--Technical Overview
+From a technical point of view, the web page is constructed using HTML and CSS. Most of the HTML content are form elements. All the style parameters are handled in a style section, at the top of the same page. -->
+<!--Interactive Features
+The company requires you to have two interactive features in the web page. 
+1. When the mouse is moved over any label or input or select element, the text in that element is shown larger. When the mouse moves away from the element, the text returns to its normal size.
+
+2. Immediately after the user selects the image of his/her face, the image is shown in the web page. A small piece of JavaScript will be made availabel to you to help with this functionality. However, you are not expected to understand the JavaScript code at this stage in the course and should not create any further JavaScript for this assessment task.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Have a nice Date</title>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+</head>
+<body>
+	<h1>Please Enter Your Details For Our Dating Website!</h1>
+	<form action = "destination" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend><h3>Your Face</h3></legend>
+			<label for="file">Your image:</label>
+			<input type="file" name="filename" onchange="readURL(this);" id = "fileupload" accept="image/gif, image/jpeg, image/png" required><br>
+			<label for="preview">Image preview:</label>
+			<img id= "preview" src="#" alt="your image">
+		</fieldset><br>
+		<fieldset>
+			<legend><h3>Your General Details</h3></legend>
+			<label for="name">Name: </label>
+			<input type="text" name="name" id = "name" required><br>
+			<label for="gender" >Gender:</label>
+			<input type="radio" name="gender" value="Male" id = "gender" required>Male
+			<input type="radio" name="gender" value="Female" id = "gender" required>Female<br>
+			<label for="age">Age:</label>
+			<input type="number" name="age" id = "age" required><br>
+			<label for="birth">Date of Birth:</label>
+			<input type="date" name="birth" id = "birth"><br>
+			<label for="color">Favorite color:</label>
+			<input type="color" name="color" id="color"><br>
+			<label for="country">Which Country:</label>
+			<select name="country" id="country">
+				<option value="no">No Selection</option>
+				<option value="china">China</option>
+				<option value="us">United States</option>
+				<option value="british">British</option>
+				<option value="india">India</option>
+			</select><br>
+		</fieldset><br>
+		<fieldset>
+			<legend><h3>Your Indicators</h3></legend>
+			<label for="height">Height:</label>
+			<span id="range1">Short </span><input type="range" name="height" min="0" max="100" id="height"><span id="range2"> Tall </span><br>
+			<label for="salary">Salary:</label>
+			<span id="range1">Poor </span><input type="range" name="salary" min="0" max="100" id="salary"><span id="range2"> Rich </span><br>
+		</fieldset><br>
+		<fieldset>
+			<legend><h3>Your Contact Information</h3></legend>
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" required><br>
+			<label for="mobile">Mobile:</label>
+			<input type="tel" name="mobile" id="mobile"><br>
+			<label for="address">Address:</label>
+			<textarea name="address" rows="3" cols="30" id = "address"></textarea><br>
+			<label for="contact">Method to contact you:</label>
+			<input type="checkbox" name="contact1" value="email" id = "contact">Email
+			<input type="checkbox" name="contact2" value="whatsapp" id = "contact">Whatsapp
+			<input type="checkbox" name="contact3" value="inappchat" id = "contact">In-app chat<br>
+		</fieldset><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
